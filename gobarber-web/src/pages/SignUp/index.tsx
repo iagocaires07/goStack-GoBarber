@@ -50,6 +50,8 @@ const SingUp: React.FC = () => {
           title: 'Cadastro realizado!',
           description: 'Você já pode fazer seu logon no GoBarber',
         });
+
+        return;
       } catch (err) {
         const erros = getValidationErros(err);
         formRef.current?.setErrors(erros);

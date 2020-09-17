@@ -6,11 +6,11 @@ import Toast from './Toast';
 import { Container } from './styles';
 import { ToastMesssage } from '../../hooks/toast';
 
-interface ContainerMessage {
+interface ToastContainerProps {
   messages: ToastMesssage[];
 }
 
-const ToastContainer: React.FC<ContainerMessage> = ({ messages }) => {
+const ToastContainer: React.FC<ToastContainerProps> = ({ messages }) => {
   const messagesWhitTransitions = useTransition(
     messages,
     message => message.id,
