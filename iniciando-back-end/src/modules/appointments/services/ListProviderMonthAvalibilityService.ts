@@ -7,7 +7,7 @@ import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 interface IRequest {
   provider_id: string;
   month: number;
-  yaer: number;
+  year: number;
 }
 
 type IResponse = Array<{
@@ -24,18 +24,18 @@ class ListProviderMonthAvalibilityService {
 
   public async execute({
     provider_id,
-    yaer,
+    year,
     month,
   }: IRequest): Promise<IResponse> {
     const appointments = await this.appointmentsRepository.findAllInMonthFromProvider(
       {
         provider_id,
-        yaer,
+        year,
         month,
       },
     );
 
-    const numberOfDaysInMonth = getDaysInMonth(new Date(yaer, month - 1));
+    const numberOfDaysInMonth = getDaysInMonth(new Date(year, month - 1));
 
     const eachDayArray = Array.from(
       { length: numberOfDaysInMonth },
