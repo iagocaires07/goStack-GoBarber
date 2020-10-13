@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import { injectable, inject } from 'tsyringe';
 
 import ICacheProvider from '@shared/container/provider/CachProvider/models/ICacheProvider';
-import Appointments from '../infra/typeorm/entities/Appointment';
+import Appointment from '../infra/typeorm/entities/Appointment';
 import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 
 interface IRequest {
@@ -27,21 +27,23 @@ class ListProviderAppointmentsService {
     day,
     month,
     year,
-  }: IRequest): Promise<Appointments[]> {
-    const cacheData = await this.cacheProvider.recover('asd');
+  }: IRequest): Promise<Appointment[]> {
+    const caheKey = `provider-appointments:${provider_id}:${year}-${month}-${day}`;
 
-    console.log(cacheData);
+    let appointments = await this.cacheProvider.recover<Appointment[]>(caheKey);
 
-    const appointments = await this.appointmentsRepository.findAllInDayFromProvider(
-      {
-        provider_id,
-        year,
-        month,
-        day,
-      },
-    );
+    if (!appointments) {
+      appointments = await this.appointmentsRepository.findAllInDayFromProvider(
+        {
+          provider_id,
+          year,
+          month,
+          day,
+        },
+      );
+    }
 
-    // await this.cacheProvider.save('asd', 'asd');
+    await this.cacheProvider.save(caheKey, appointments);
 
     return appointments;
   }
