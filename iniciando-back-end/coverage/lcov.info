@@ -1,5 +1,5 @@
 TN:
-SF:src\modules\appointments\services\CreateAppointmentServices.ts
+SF:src/modules/appointments/services/CreateAppointmentServices.ts
 FN:18,(anonymous_18)
 FN:19,CreateAppointmentServices
 FN:30,(anonymous_20)
@@ -52,7 +52,7 @@ BRF:10
 BRH:9
 end_of_record
 TN:
-SF:src\modules\appointments\services\ListProviderAppointmentsService.ts
+SF:src/modules/appointments/services/ListProviderAppointmentsService.ts
 FN:16,(anonymous_17)
 FN:17,ListProviderAppointmentsService
 FN:25,(anonymous_19)
@@ -88,7 +88,7 @@ BRF:3
 BRH:2
 end_of_record
 TN:
-SF:src\modules\appointments\services\ListProviderDayAvailabilityService.ts
+SF:src/modules/appointments/services/ListProviderDayAvailabilityService.ts
 FN:20,(anonymous_17)
 FN:21,ListProviderDayAvalibilityService
 FN:26,(anonymous_19)
@@ -135,7 +135,7 @@ BRF:3
 BRH:3
 end_of_record
 TN:
-SF:src\modules\appointments\services\ListProviderMonthAvalibilityService.ts
+SF:src/modules/appointments/services/ListProviderMonthAvalibilityService.ts
 FN:19,(anonymous_17)
 FN:20,ListProviderMonthAvalibilityService
 FN:25,(anonymous_19)
@@ -177,7 +177,7 @@ BRF:1
 BRH:1
 end_of_record
 TN:
-SF:src\modules\appointments\services\ListProvidersService.ts
+SF:src/modules/appointments/services/ListProvidersService.ts
 FN:12,(anonymous_17)
 FN:13,ListProvidersService
 FN:21,(anonymous_19)
@@ -208,7 +208,7 @@ BRF:4
 BRH:3
 end_of_record
 TN:
-SF:src\modules\users\services\AuthenticateUserService.ts
+SF:src/modules/users/services/AuthenticateUserService.ts
 FN:22,(anonymous_18)
 FN:23,AuthenticateUserService
 FN:31,(anonymous_20)
@@ -247,7 +247,7 @@ BRF:5
 BRH:5
 end_of_record
 TN:
-SF:src\modules\users\services\CreateUserService.ts
+SF:src/modules/users/services/CreateUserService.ts
 FN:17,(anonymous_18)
 FN:18,CreateUserService
 FN:29,(anonymous_20)
@@ -281,7 +281,7 @@ BRF:3
 BRH:3
 end_of_record
 TN:
-SF:src\modules\users\services\ResetPasswordService.ts
+SF:src/modules/users/services/ResetPasswordService.ts
 FN:17,(anonymous_18)
 FN:18,ResetPasswordService
 FN:29,(anonymous_20)
@@ -325,7 +325,7 @@ BRF:7
 BRH:7
 end_of_record
 TN:
-SF:src\modules\users\services\SendForgotPasswordEmailService.ts
+SF:src/modules/users/services/SendForgotPasswordEmailService.ts
 FN:14,(anonymous_18)
 FN:15,SendForgotPasswordEmailService
 FN:26,(anonymous_20)
@@ -359,7 +359,7 @@ BRF:3
 BRH:3
 end_of_record
 TN:
-SF:src\modules\users\services\ShowProfileService.ts
+SF:src/modules/users/services/ShowProfileService.ts
 FN:13,(anonymous_18)
 FN:14,ShowProfileService
 FN:19,(anonymous_20)
@@ -388,7 +388,7 @@ BRF:3
 BRH:3
 end_of_record
 TN:
-SF:src\modules\users\services\UopateProfileService.ts
+SF:src/modules/users/services/UopateProfileService.ts
 FN:17,(anonymous_18)
 FN:18,UpdateProfileService
 FN:26,(anonymous_20)
@@ -449,7 +449,7 @@ BRF:17
 BRH:17
 end_of_record
 TN:
-SF:src\modules\users\services\UpdateUserAvatarSevice.ts
+SF:src/modules/users/services/UpdateUserAvatarSevice.ts
 FN:15,(anonymous_18)
 FN:16,UpdateUserAvatarService
 FN:24,(anonymous_20)
