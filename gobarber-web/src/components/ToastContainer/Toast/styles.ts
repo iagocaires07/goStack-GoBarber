@@ -1,6 +1,11 @@
 import styled, { css } from 'styled-components';
 import { animated } from 'react-spring';
 
+interface ConatinerProps {
+  type?: 'success' | 'error' | 'info';
+  hasDescription: number;
+}
+
 const toastTypeVariations = {
   info: css`
     background: #ebf8ff;
@@ -17,11 +22,6 @@ const toastTypeVariations = {
     color: #c53030;
   `,
 };
-
-interface ConatinerProps {
-  type?: 'success' | 'error' | 'info';
-  hasDescription: boolean;
-}
 
 export const Container = styled(animated.div)<ConatinerProps>`
   width: 360px;
