@@ -18,6 +18,7 @@ import api from '../../services/api';
 
 interface ResetPasswordFormData {
   password: string;
+  // eslint-disable-next-line camelcase
   password_confirmation: string;
 }
 
@@ -33,23 +34,22 @@ const ResetPassword: React.FC = () => {
       try {
         formRef.current?.setErrors({});
         const schema = Yup.object().shape({
-        
           password: Yup.string().required('Senha obrigatória'),
-          password_confirmation: Yup.string()
-            .oneOf(
-              [Yup.ref('password'), undefined],
-              'Confirmação incorreta',
-            ),
+          password_confirmation: Yup.string().oneOf(
+            [Yup.ref('password'), undefined],
+            'Confirmação incorreta',
+          ),
         });
 
         await schema.validate(data, {
           abortEarly: false,
         });
 
-        const {password, password_confirmation} = data;
+        // eslint-disable-next-line camelcase
+        const { password, password_confirmation } = data;
         const token = location.search.replace('?token=', '');
-      
-        if(!token){
+
+        if (!token) {
           throw new Error();
         }
 
@@ -57,9 +57,8 @@ const ResetPassword: React.FC = () => {
           password,
           password_confirmation,
           token,
-        })
+        });
 
-       
         history.push('/');
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
@@ -76,7 +75,7 @@ const ResetPassword: React.FC = () => {
         });
       }
     },
-    [ addToast, history, location.search ],
+    [addToast, history, location.search],
   );
 
   return (

@@ -43,18 +43,17 @@ const ForgotPassword: React.FC = () => {
         await schema.validate(data, {
           abortEarly: false,
         });
-        
+
         await api.post('/password/forgot', {
-          email: data.email
+          email: data.email,
         });
 
         addToast({
           type: 'success',
           title: 'E-mail de recuperação enviado',
-          description: 
+          description:
             'Enviamos um e-mail para confirmar a recuperação de senha, cheque sua cixa de entrada',
         });
-
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErros(err);
@@ -66,13 +65,14 @@ const ForgotPassword: React.FC = () => {
         addToast({
           type: 'error',
           title: 'Erro na autenticação',
-          description: 'Ocorreu um erro ao tentar reaizar a recuperação de senha, tente novamente.',
+          description:
+            'Ocorreu um erro ao tentar reaizar a recuperação de senha, tente novamente.',
         });
-      }finally{
+      } finally {
         setLoading(false);
       }
     },
-    [ addToast ],
+    [addToast],
   );
 
   return (
@@ -86,8 +86,9 @@ const ForgotPassword: React.FC = () => {
 
             <Input name="email" icon={FiMail} placeholder="E-mail" />
 
-            <Button loading={loading} type="submit">Recuperar</Button>
-
+            <Button loading={loading} type="submit">
+              Recuperar
+            </Button>
           </Form>
 
           <Link to="/">
