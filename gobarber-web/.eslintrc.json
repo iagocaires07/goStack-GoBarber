@@ -36,6 +36,8 @@
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/ban-types": "off",
     "no-unused-expressions": "off",
+    "import/no-duplicates": "off",
+    "jsx-a11y/alt-text": "off",
     "react-hooks/exhaustive-deps": "warn",
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
