@@ -21,6 +21,7 @@ import {
   ProviderText,
   ProvidersListTitle,
 } from './styles';
+import Button from '../../components/Button';
 
 export interface Providers {
   id: string;
