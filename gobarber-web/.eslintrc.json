@@ -1,7 +1,8 @@
 {
   "env": {
       "browser": true,
-      "es6": true
+      "es6": true,
+      "jest": true
   },
   "extends": [
       "plugin:react/recommended",
@@ -37,6 +38,8 @@
     "camelcase": "off",
     "@typescript-eslint/ban-types": "off",
     "no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": ["error"],
+    "@typescript-eslint/no-unused-vars": "off",
     "import/no-duplicates": "off",
     "jsx-a11y/alt-text": "off",
     "react/jsx-first-prop-new-line": "off",

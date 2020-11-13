@@ -32,6 +32,7 @@ const SignIn: React.FC = () => {
     async (data: SignInFormData) => {
       try {
         formRef.current?.setErrors({});
+
         const schema = Yup.object().shape({
           email: Yup.string()
             .required('E-mail obrigatório')
@@ -46,6 +47,7 @@ const SignIn: React.FC = () => {
           email: data.email,
           password: data.password,
         });
+
         history.push('/dashboard');
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
